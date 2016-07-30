@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>Calculator</title>
+    <script type="text/javascript">
+        function editDisplay(e) {
+            document.getElementById("Input").value += e;
+        }
+        function showResult(total) {
+            if (total != undefined && total != Infinity) {
+                document.getElementById("Input").value = total;
+            }
+            else {
+                alert("Provide Proper Expression...");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="form1">
+    <div>
+        <table style="margin-left:38%;margin-top:10%;">  
+        <tr>  
+            <td colspan="4">  
+                 </td>  
+        </tr>  
+        <tr>  
+            <td colspan="4">  
+                <input type="text" id="Input" class="form-control" style="height:45px;width:375px;font-size:x-large;text-align:right;" />
+            </td> 
+        </tr>   
+        <tr>  
+            <td>  
+                <button type="button" class="btn btn-default" onclick="editDisplay('(')" style="width:95px;height:50px">(</button>
+            </td>  
+            <td>  
+                <button type="button" class="btn btn-default" onclick="editDisplay(')')" style="width:95px;height:50px">)</button>
+            </td>  
+            <td>  
+                <button type="button" class="btn btn-default" onclick="document.getElementById('Input').value = ''" style="width:95px;height:50px">Del</button>
+            </td>  
+            <td>  
+                <button type="button" class="btn btn-default" style="width:95px;height:50px">AC</button>
+            </td>  
+        </tr>  
+        <tr>  
+            <td>  
+                <button class="btn btn-default" type="button" onclick="editDisplay('7')" style="width:95px;height:50px">7</button> 
+            </td>  
+            <td>  
+                <button type="button" class="btn btn-default" onclick="editDisplay('8')" style="width:95px;height:50px">8</button> 
+            </td>  
+            <td>  
+                <button type="button" class="btn btn-default" onclick="editDisplay('9')" style="width:95px;height:50px">9</button>
+            </td>  
+            <td>  
+                <button type="button" class="btn btn-default" onclick="editDisplay('/')" style="width:95px;height:50px">/</button>
+            </td>  
+        </tr>  
+        <tr>  
+            <td>  
+                <button type="button" class="btn btn-default" onclick="editDisplay('4')" style="width:95px;height:50px">4</button>
+            </td>  
+            <td>  
+                <button type="button" class="btn btn-default" onclick="editDisplay('5')" style="width:95px;height:50px">5</button>
+            </td>  
+            <td>  
+                <button type="button" class="btn btn-default" onclick="editDisplay('6')" style="width:95px;height:50px">6</button>
+            </td>  
+            <td>  
+                <button type="button" class="btn btn-default" onclick="editDisplay('*')" style="width:95px;height:50px">X</button> 
+            </td>  
+        </tr>  
+        <tr>  
+            <td>  
+                <button type="button" class="btn btn-default" onclick="editDisplay('1')" style="width:95px;height:50px">1</button>
+            </td>  
+            <td>  
+                <button type="button" class="btn btn-default" onclick="editDisplay('2')" style="width:95px;height:50px">2</button>
+            </td>  
+            <td>  
+                <button type="button" class="btn btn-default" onclick="editDisplay('3')" style="width:95px;height:50px">3</button> 
+            </td>  
+            <td>  
+                <button type="button" class="btn btn-default" onclick="editDisplay('-')" style="width:95px;height:50px">-</button>
+            </td>  
+        </tr>  
+        <tr>  
+            <td>  
+                <button type="button" class="btn btn-default" onclick="editDisplay('0')" style="width:95px;height:50px">0</button>
+            </td>  
+            <td>  
+                <button type="button" class="btn btn-default" onclick="editDisplay('.')" style="width:95px;height:50px">.</button>
+            </td>  
+            <td>  
+                <button type="button" class="btn btn-info" onclick="showResult(eval(document.getElementById('Input').value));return false" style="width:95px;height:50px">=</button>  
+            </td>  
+            <td>  
+                <button type="button" class="btn btn-default" onclick="editDisplay('+')" style="width:95px;height:50px">+</button>
+            </td>  
+        </tr>  
+    </table> 
+    </div>
+    </form>
+</body>
+</html>
